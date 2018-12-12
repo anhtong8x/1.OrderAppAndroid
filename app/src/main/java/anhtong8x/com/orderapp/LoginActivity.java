@@ -70,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.show();
 
                 //2. get token
+                //---
                 ApiInterface api = ApiClient.getRetrofit().create(ApiInterface.class);
                 Call<ApiResponse<LoginResponse>> call = api.getUserLogin(new test(uName,pWord));
                 Log.d("LoginActivity: ", "" + call.request().url());
